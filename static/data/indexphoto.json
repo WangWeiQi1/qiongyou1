@@ -1,0 +1,17 @@
+{
+  "indexPhoto": [
+    {
+      "src": "./static/img/fujin.png"
+    },
+    {
+      "src": "static/img/mudidi.png"
+    },
+    {
+      "src": "static/img/jieban.png"
+    },
+    {
+      "src": "static/img/gongju.png"
+    }
+
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "headPortrait": [
+    {
+      "src": "./static/img/timg-1.jpeg"
+    },
+    {
+      "src": "static/img/timg-2.jpeg"
+    },
+    {
+      "src": "static/img/timg-3.jpeg"
+    }
+
+
+  ]
+}

@@ -1,0 +1,59 @@
+{
+    "data": {
+        "hotels": [{
+            "img": "https://ccm.ddcdn.com/ext/photo-l/13/83/41/23/royal-suite-bathtub.jpg",
+            "nm": "哈尔滨索菲特大酒店",
+            "dnum":"678",
+            "price":"534",
+            "id": 0
+        },{
+            "img": "https://ccm.ddcdn.com/ext/photo-l/11/58/58/b5/diamond-d-angkor-boutique.jpg",
+            "nm": "7天哈尔滨中央大街店",
+            "dnum":"838367",
+            "price":"534",
+            "id": 1
+          },{
+            "img": "https://ccm.ddcdn.com/ext/photo-l/13/85/43/19/swimming-pool.jpg",
+            "nm": "万达假日酒店",
+            "dnum":"748373",
+            "price":"263",
+            "id": 2
+          },{
+            "img": "https://ccm.ddcdn.com/ext/photo-l/06/4a/c5/58/wwwkhmermansioncom.jpg",
+            "nm": "哈尔滨如家中央大街店",
+            "dnum":"683768",
+            "price":"274",
+            "id": 3
+          },{
+            "img": "https://ccm.ddcdn.com/ext/photo-l/12/38/b7/5a/sofitel-angkor-phokeethra.jpg",
+            "nm": "哈尔滨香格里拉大酒店",
+            "dnum":"9679",
+            "price":"386",
+            "id": 4
+          },{
+            "img": "https://ccm.ddcdn.com/ext/photo-l/11/84/fb/f1/central-suite-residence.jpg",
+            "nm": "哈尔滨汉庭索菲亚广场店",
+            "dnum":"68265",
+            "price":"344",
+            "id": 5
+          },{
+            "img": "https://ccm.ddcdn.com/ext/photo-l/09/b5/94/05/hotel-exterior.jpg",
+            "nm": "7天会展中心店",
+            "dnum":"6286472",
+            "price":"234",
+            "id": 6
+          },{
+            "img": "https://ccm.ddcdn.com/ext/photo-l/12/97/43/82/shinta-mani-shack.jpg",
+            "nm": "哈尔滨万达嘉华酒店",
+            "dnum":"73527",
+            "price":"146",
+            "id": 7
+          },{
+            "img": "https://ccm.ddcdn.com/ext/photo-l/11/49/8f/60/hotel-exterior-with-pool.jpg",
+            "nm": "正明锦江大酒店",
+            "dnum":"75327",
+            "price":"224",
+            "id": 8
+          }]
+    }
+}

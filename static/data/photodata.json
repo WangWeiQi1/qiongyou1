@@ -1,0 +1,24 @@
+{
+  "photoData": [
+    {
+      "src": "./static/img/timg-1.jpeg"
+    },
+    {
+      "src": "static/img/timg-2.jpeg"
+    },
+    {
+      "src": "static/img/timg-3.jpeg"
+    },
+    {
+      "src": "static/img/timg-4.jpeg"
+    },
+    {
+      "src": "static/img/timg-5.jpeg"
+    },
+    {
+      "src": "static/img/timg-6.jpeg"
+    }
+
+
+  ]
+}

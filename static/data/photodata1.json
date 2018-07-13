@@ -1,0 +1,13 @@
+{
+  "photoData": [
+    {
+      "src": "/static/image/01.jpg"
+    },
+    {
+      "src": "/static/image/02.jpg"
+    },
+    {
+      "src": "/static/image/03.jpg"
+    }
+  ]
+}

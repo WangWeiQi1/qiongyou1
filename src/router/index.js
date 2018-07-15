@@ -28,6 +28,29 @@ import HotelDetail from '@/components/hotel/HotelDetail'
 import RestaurantDetail from '@/components/restaurant/RestaurantDetail'
 import TripAddressDetail from '@/components/tripAddress/TripAddressDetail'
 
+
+/***********hhy************/
+import MyMessage from '@/components/mymessage/MyMessage'
+
+import PrivateLetter from '@/components/privateletter/PrivateLetter'
+import PartnerMessage from '@/components/partnermessage/PartnerMessage'
+
+// //引入个人信息页面
+ import PeopleIntroduction  from '@/components/partnermessage/PeopleIntroduction'
+// //引入创建页面
+ import SetUp from '@/components/setup/SetUp'
+// //引入创建详情页
+ import CreateTravel from '@/components/createtravel/CreateTravel'
+/*************hhy**************/
+import Unlog from '@/components/login/Unlog'
+import Foodcollect from '@/components/foodcollect/Foodcollect'
+import Hotelcol from '@/components/hotelcollect/Hotelcol'
+import Viewcollect from '@/components/viewcollect/viewcollect'
+import Order from '@/components/order/Order'
+import Note from '@/components/youji/Note'
+import Notedetail from '@/components/youji/Notedetail'
+import Collect from '@/components/collect/Collect'
+
 Vue.use(Router);
 
 export default new Router({
@@ -140,6 +163,80 @@ export default new Router({
       path: '/tripaddressdetail',
       name: 'TripAddressDetail',
       component: TripAddressDetail
+
+    },
+
+    /*************hhy**************/
+    {
+          path:'/MyMessage',
+          name:'MyMessage',
+          component:MyMessage
+    },
+    {
+      path:'/PrivateLetter',
+      name:'PrivateLetter',
+      component:PrivateLetter
+  },
+  {
+      path:'/PartnerMessage',
+      name:'PartnerMessage',
+      component: PartnerMessage
+  },
+  {
+      path:'/PeopleIntroduction',
+      name:'PeopleIntroduction',
+      component: PeopleIntroduction
+  },
+  {
+      path:'/SetUp',
+      name:'SetUp',
+      component: SetUp
+  },
+  {
+      path:'/CreateTravel',
+      name:'CreateTravel',
+      component: CreateTravel
+  },
+    /*************hhy**************/
+    {
+      path: '/unlog',
+      name: 'Unlog',
+      component: Unlog
+    },
+    {
+      path: '/foodcollect',
+      name: 'Foodcollect',
+      component: Foodcollect
+    },
+    {
+      path: '/hotelcol',
+      name: 'Hotelcol',
+      component: Hotelcol
+    },
+    {
+      path: '/viewcollect',
+      name: 'Viewcollect',
+      component: Viewcollect
+    },
+    {
+      path: '/order',
+      name: 'Order',
+      component: Order
+    },
+    {
+      path: '/note',
+      name: 'Note',
+      component: Note
+    },
+    {
+      path: '/notedetail',
+      name: 'Notedetail',
+      component: Notedetail
+    },
+    {
+      path: '/collect',
+      name: 'Collect',
+      component: Collect
     }
   ]
 })

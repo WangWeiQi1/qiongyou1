@@ -88,7 +88,7 @@ export default {
         background-color:  rgb(50,205,50);
     }
      .header-title{
-        font-size:0.3rem; 
+        font-size:0.3rem;
     }
     .note{
         margin-top:1rem;
@@ -102,7 +102,7 @@ export default {
     }
     .note .head-sculpture{
         height:0.7rem ;
-        widows: 0.7rem;
+        width: 0.7rem;
         transform: translate(43%,25%);
     }
     .note span{
@@ -124,6 +124,6 @@ export default {
         position: absolute;
         top:0.14rem;
         left: 0.8rem;
-        
+
     }
 </style>

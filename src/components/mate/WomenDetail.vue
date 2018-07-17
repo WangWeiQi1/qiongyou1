@@ -36,39 +36,7 @@
                     <p class="comment-user-name">拾贰姑娘</p>
                     <p class="comment-time">7-14 17:11</p>
                     <p>哈哈哈哈哈哈</p>  
-                </div>
-                <ul class="reply">
-                    <li class="reply-list">
-                        <div class="reply-user-photo">
-                            <img src="/static/img/timg-1.b750de0.jpeg" alt="">
-                        </div>
-                        <div class="reply-content">
-                            <p class="reply-user-name">拾贰姑娘</p>
-                            <p class="reply-time">7-14 17:15</p>
-                            <p>你笑啥</p>  
-                        </div>
-                    </li>
-                    <li class="reply-list">
-                        <div class="reply-user-photo">
-                            <img src="/static/img/timg-1.b750de0.jpeg" alt="">
-                        </div>
-                        <div class="reply-content">
-                            <p class="reply-user-name">拾贰姑娘</p>
-                            <p class="reply-time">7-14 17:15</p>
-                            <p>你笑啥</p>  
-                        </div>
-                    </li>
-                    <li class="reply-list">
-                        <div class="reply-user-photo">
-                            <img src="/static/img/timg-1.b750de0.jpeg" alt="">
-                        </div>
-                        <div class="reply-content">
-                            <p class="reply-user-name">拾贰姑娘</p>
-                            <p class="reply-time">7-14 17:15</p>
-                            <p>你笑啥</p>  
-                        </div>
-                    </li>
-                </ul>
+                </div>              
             </li>
             <li class="comment-list">
                 <div class="comment-user-photo">
@@ -78,39 +46,7 @@
                     <p class="comment-user-name">拾贰姑娘</p>
                     <p class="comment-time">7-14 17:11</p>
                     <p>哈哈哈哈哈哈</p>  
-                </div>
-                <ul class="reply">
-                    <li class="reply-list">
-                        <div class="reply-user-photo">
-                            <img src="/static/img/timg-1.b750de0.jpeg" alt="">
-                        </div>
-                        <div class="reply-content">
-                            <p class="reply-user-name">拾贰姑娘</p>
-                            <p class="reply-time">7-14 17:15</p>
-                            <p>你笑啥</p>  
-                        </div>
-                    </li>
-                    <li class="reply-list">
-                        <div class="reply-user-photo">
-                            <img src="/static/img/timg-1.b750de0.jpeg" alt="">
-                        </div>
-                        <div class="reply-content">
-                            <p class="reply-user-name">拾贰姑娘</p>
-                            <p class="reply-time">7-14 17:15</p>
-                            <p>你笑啥</p>  
-                        </div>
-                    </li>
-                    <li class="reply-list">
-                        <div class="reply-user-photo">
-                            <img src="/static/img/timg-1.b750de0.jpeg" alt="">
-                        </div>
-                        <div class="reply-content">
-                            <p class="reply-user-name">拾贰姑娘</p>
-                            <p class="reply-time">7-14 17:15</p>
-                            <p>你笑啥</p>  
-                        </div>
-                    </li>
-                </ul>
+                </div>              
             </li>
             <li class="comment-list">
                 <div class="comment-user-photo">
@@ -120,40 +56,19 @@
                     <p class="comment-user-name">拾贰姑娘</p>
                     <p class="comment-time">7-14 17:11</p>
                     <p>哈哈哈哈哈哈</p>  
-                </div>
-                <ul class="reply">
-                    <li class="reply-list">
-                        <div class="reply-user-photo">
-                            <img src="/static/img/timg-1.b750de0.jpeg" alt="">
-                        </div>
-                        <div class="reply-content">
-                            <p class="reply-user-name">拾贰姑娘</p>
-                            <p class="reply-time">7-14 17:15</p>
-                            <p>你笑啥</p>  
-                        </div>
-                    </li>
-                    <li class="reply-list">
-                        <div class="reply-user-photo">
-                            <img src="/static/img/timg-1.b750de0.jpeg" alt="">
-                        </div>
-                        <div class="reply-content">
-                            <p class="reply-user-name">拾贰姑娘</p>
-                            <p class="reply-time">7-14 17:15</p>
-                            <p>你笑啥</p>  
-                        </div>
-                    </li>
-                    <li class="reply-list">
-                        <div class="reply-user-photo">
-                            <img src="/static/img/timg-1.b750de0.jpeg" alt="">
-                        </div>
-                        <div class="reply-content">
-                            <p class="reply-user-name">拾贰姑娘</p>
-                            <p class="reply-time">7-14 17:15</p>
-                            <p>你笑啥</p>  
-                        </div>
-                    </li>
-                </ul>
+                </div>              
             </li>
+            <li class="comment-list">
+                <div class="comment-user-photo">
+                    <img src="/static/img/timg-1.b750de0.jpeg" alt="">
+                </div>
+                <div class="comment-content">
+                    <p class="comment-user-name">拾贰姑娘</p>
+                    <p class="comment-time">7-14 17:11</p>
+                    <p>哈哈哈哈哈哈</p>  
+                </div>              
+            </li>
+
         </ul>
     </div>
 </template>
@@ -270,7 +185,7 @@ export default {
 }
 .comment-list{
     position: relative;
-    padding: 0.6rem 0;
+    padding: 0.4rem 0 0.9rem 0;
     border-bottom:0.01rem solid #f0f0f0;
 }
 .comment-list .comment-user-photo img{
@@ -282,41 +197,13 @@ export default {
 .comment-list .comment-content{
     position: absolute;
     left: 1.6rem;
-    top: 0.6rem;
+    top: 0.4rem;
     font-size: 0.3rem;
 }
 .comment-list .comment-user-name{
     font-weight: bold; 
 }
 .comment-list .comment-time{
-    font-size: 0.25rem;
-}
-.reply{
-    width: 100%;
-    background: #f0f0f0;
-    margin-top: 1.3rem;
-}
-.reply .reply-list{
-    position: relative;
-    padding: 0.3rem 0 0.8rem 0;
-    border-bottom:0.01rem solid #e0e0e0;
-}
-.reply .reply-list .reply-user-photo img{
-    margin-left: 0.4rem;
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 50%;
-}
-.reply .reply-list .reply-content{
-    position: absolute;
-    left: 1.6rem;
-    top: 0.2rem;
-    font-size: 0.3rem;
-}
-.reply .reply-list .reply-user-name{
-    font-weight: bold; 
-}
-.reply .reply-list .reply-time{
     font-size: 0.25rem;
 }
 </style>

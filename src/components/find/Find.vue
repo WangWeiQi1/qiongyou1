@@ -35,7 +35,7 @@
     },
     methods: {
       toDetail(id){
-        this.$router.push({name:'Notedetail',params:{tripnotesId:id}});
+        this.$router.push({name:'FindDetail',params:{tripnotesId:id}});
       },
       routerLink(path){
         this.$router.push(path);

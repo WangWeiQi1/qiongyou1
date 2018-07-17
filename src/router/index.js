@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Find from '@/components/find/Find'
+import FindDetail from '@/components/find/FindDetail'
 import Mine from '@/components/mine/Mine'
 import Index from '@/components/index/Index'
 import Shop from '@/components/shop/Shop'
@@ -50,7 +51,13 @@ export default new Router({
       path:'/find',
       name:'Find',
       component:Find
-    },{
+    },
+    {
+      path:'/finddetail',
+      name:'FindDetail',
+      component:FindDetail
+    },
+    {
       path:'/mine',
       name:'Mine',
       component:Mine

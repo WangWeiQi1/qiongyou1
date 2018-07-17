@@ -6,10 +6,8 @@
        </div>  
     <div class="note-head">
       <h4 class="title">香港七日游</h4>
-      <p class="rote">路线1</p>
       <div class="hits">
-        <img src="@/assets/img/eye-fill.png" alt="">
-        <p>1234</p>
+        <img src="@/assets/img/collect.png" alt="">
       </div>
       <span class="author">
         <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531326866675&di=c3ee710355466f0dc2d0a051aa57f2e8&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fpeople%2F201501%2F11%2F20150111114017_3GVTi.jpeg" alt="">
@@ -96,15 +94,10 @@
 }
 .hits img{
   position: absolute;
-  right:1rem;
-  top:1rem;
+  right:0.2rem;
+  top:1.1rem;
   height: 0.4rem;
   width: 0.4rem;
-}
-.hits p{
-  position: absolute;
-  right:0.4rem;
-  top:1rem;
 }
 .author img{
   width: 0.7rem;

@@ -1,47 +1,38 @@
 {
   "albums": [{
-      "name": "飙升榜",
+      "name": "看了这个云南旅游攻略，立刻就想出发了",
       "id": 19723756,
-      "bg": "/static/img/01.jpg",
+      "bg": "http://tutiao.2020zjj.com/kindeditor/attached/image/2018/20180426165443844384.jpg",
       "content":"今天天气真好"
     },
     {
-      "name": "新歌榜",
+      "name": "看了这个云南旅游攻略，立刻就想出发了",
       "id": 3779629,
-      "bg": "static/img/02.jpg",
+      "bg": "http://tutiao.2020zjj.com/kindeditor/attached/image/2018/20180426122394889488.jpg",
       "content":"今天天气真好"
     },
     {
-      "name": "原创榜",
+      "name": "看了这个云南旅游攻略，立刻就想出发了",
       "id": 2884035,
-      "bg": "static/img/03.jpg",
+      "bg": "http://tutiao.2020zjj.com/kindeditor/attached/image/2018/20180502152563436343.jpg",
       "content":"今天天气真好"
     },
     {
-      "name": "KTV麦榜",
-      "id": 21845217,
-      "bg": "static/img/04.jpg",
+      "name": "看了这个云南旅游攻略，立刻就想出发了",
+      "id": 19723756,
+      "bg": "http://tutiao.2020zjj.com/kindeditor/attached/image/2018/20180426165443844384.jpg",
       "content":"今天天气真好"
     },
     {
-      "name": "华语金曲榜",
-      "id": 4395559,
-      "bg": "static/img/05.jpg",
+      "name": "看了这个云南旅游攻略，立刻就想出发了",
+      "id": 3779629,
+      "bg": "http://tutiao.2020zjj.com/kindeditor/attached/image/2018/20180426122394889488.jpg",
       "content":"今天天气真好"
     },
     {
-      "name": "我的专辑",
-      "id": 98833242,
-      "bg": "static/img/06.jpg"
-    },{
-      "name": "我的专辑",
-      "id": 98833243,
-      "bg": "static/img/07.jpg",
-      "content":"今天天气真好"
-    },{
-      "name": "我的专辑",
-      "id": 98833244,
-      "bg": "static/img/08.jpg",
+      "name": "看了这个云南旅游攻略，立刻就想出发了",
+      "id": 2884035,
+      "bg": "http://tutiao.2020zjj.com/kindeditor/attached/image/2018/20180502152563436343.jpg",
       "content":"今天天气真好"
     }
   ]

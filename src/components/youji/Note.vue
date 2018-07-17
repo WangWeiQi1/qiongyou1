@@ -4,9 +4,9 @@
     <div class="card" @click='routerLink("/notedetail")'>
       <div class="card-head">
         <img class="card-img" src="http://img.zcool.cn/community/012c65580e16bfa84a0d304fb7dbeb.jpg@1280w_1l_2o_100sh.jpg">
-        <img class="time-img" src="@/assets/time2.png" alt="">
+        <img class="time-img" src="@/assets/img/time2.png" alt="">
         <span class="time">2018-01-01</span>
-        <img class="user" src="@/assets/user2.png" alt="">
+        <img class="user" src="@/assets/img/user2.png" alt="">
         <span class="author">作者名1</span>
       </div>
       <div class="card-body">
@@ -18,9 +18,9 @@
     <div class="card" @click='routerLink("/notedetail")'>
       <div class="card-head">
         <img class="card-img" src="http://bj-feiyuantu.oss-cn-beijing.aliyuncs.com/creative/vcg/veer/800water/veer-100047154.jpg">
-        <img class="time-img" src="@/assets/time2.png" alt="">
+        <img class="time-img" src="@/assets/img/time2.png" alt="">
         <span class="time">2018-02-04</span>
-        <img class="user" src="@/assets/user2.png" alt="">
+        <img class="user" src="@/assets/img/user2.png" alt="">
         <span class="author">作者名2</span>
       </div>
       <div class="card-body">

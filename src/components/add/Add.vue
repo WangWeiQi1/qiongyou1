@@ -6,11 +6,7 @@
         <img src="@/assets/img/tripnote.png" alt="">
         <h4>写游记</h4>
       </li >
-<<<<<<< HEAD
-      <li>
-=======
-      <li  @click='routerLink("CreateTravel")'>
->>>>>>> 384b3d7923b44035ccd1a1ab542acd055eb3778d
+      <li @click='routerLink("/CreateTravel")'>
         <img src="@/assets/img/xingcheng.png" alt="">
         <h4>创建行程</h4>
       </li>

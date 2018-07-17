@@ -5,34 +5,34 @@
       <li @click='routerLink("/fooddetail")'>
         <img class="bg" src="http://img3.imgtn.bdimg.com/it/u=2444710447,1442935850&fm=200&gp=0.jpg" alt="">
         <h4 class="title">餐厅名</h4>
-        <img class="mark-img" src="@/assets/mark.png" alt="">
+        <img class="mark-img" src="@/assets/img/mark.png" alt="">
         <p class="mark">9.0</p>
-        <img class="pos-img" src="@/assets/position.png" alt="">
+        <img class="pos-img" src="@/assets/img/position.png" alt="">
         <p class="city">城市名，省名</p>
       </li>
       <!--重复-->
       <li @click='routerLink("/fooddetail")'>
         <img class="bg" src="http://img3.redocn.com/tupian/20141218/fengweiyangpai_3513829.jpg" alt="">
         <h4 class="title">餐厅名2</h4>
-        <img class="mark-img" src="@/assets/mark.png" alt="">
+        <img class="mark-img" src="@/assets/img/mark.png" alt="">
         <p class="mark">9.0</p>
-        <img class="pos-img" src="@/assets/position.png" alt="">
+        <img class="pos-img" src="@/assets/img/position.png" alt="">
         <p class="city">城市名，省名</p>
       </li>
       <li @click='routerLink("/fooddetail")'>
         <img class="bg" src="http://img1.imgtn.bdimg.com/it/u=6628804,812742819&fm=200&gp=0.jpg" alt="">
         <h4 class="title">餐厅名3</h4>
-        <img class="mark-img" src="@/assets/mark.png" alt="">
+        <img class="mark-img" src="@/assets/img/mark.png" alt="">
         <p class="mark">9.0</p>
-        <img class="pos-img" src="@/assets/position.png" alt="">
+        <img class="pos-img" src="@/assets/img/position.png" alt="">
         <p class="city">城市名，省名</p>
       </li>
       <li @click='routerLink("/fooddetail")'>
         <img class="bg" src="http://img3.redocn.com/tupian/20141217/dabancai_3525529.jpg" alt="">
         <h4 class="title">餐厅名4</h4>
-        <img class="mark-img" src="@/assets/mark.png" alt="">
+        <img class="mark-img" src="@/assets/img/mark.png" alt="">
         <p class="mark">9.0</p>
-        <img class="pos-img" src="@/assets/position.png" alt="">
+        <img class="pos-img" src="@/assets/img/position.png" alt="">
         <p class="city">城市名，省名</p>
       </li>
     </ul>

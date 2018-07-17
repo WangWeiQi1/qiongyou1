@@ -8,6 +8,7 @@ import '@/assets/js/rem.js'
 
 import 'swiper/dist/css/swiper.css'
 import 'swiper/dist/js/swiper.js'
+
 import VueClipboard from 'vue-clipboard2'
 Vue.use(VueClipboard)
 

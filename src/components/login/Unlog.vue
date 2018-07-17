@@ -1,6 +1,6 @@
 <template>
   <div class="unlog" @click='routerLink("/login")'>
-    <img src="@/assets/login2.png" alt="">
+    <img src="@/assets/img/login2.png" alt="">
     <p>点击登录</p>
   </div>
 </template>

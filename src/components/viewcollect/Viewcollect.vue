@@ -5,26 +5,26 @@
       <li @click='routerLink("/viewdetail")'>
         <img class="bg" src="http://img.zcool.cn/community/012c65580e16bfa84a0d304fb7dbeb.jpg@1280w_1l_2o_100sh.jpg" alt="">
         <h4 class="title">景点名</h4>
-        <img class="mark-img" src="@/assets/mark.png" alt="">
+        <img class="mark-img" src="@/assets/img/mark.png" alt="">
         <p class="mark">9.0</p>
-        <img class="pos-img" src="@/assets/position.png" alt="">
+        <img class="pos-img" src="@/assets/img/position.png" alt="">
         <p class="city">城市名，省名</p>
       </li>
       <!--重复-->
       <li @click='routerLink("/viewdetail")'>
         <img class="bg" src="http://pic.lvmama.com/uploads/pc/place2/2014-12-01/71cf4ad1-2651-409b-811c-86bd5a931d92.jpg" alt="">
         <h4 class="title">景点名2</h4>
-        <img class="mark-img" src="@/assets/mark.png" alt="">
+        <img class="mark-img" src="@/assets/img/mark.png" alt="">
         <p class="mark">9.0</p>
-        <img class="pos-img" src="@/assets/position.png" alt="">
+        <img class="pos-img" src="@/assets/img/position.png" alt="">
         <p class="city">城市名，省名</p>
       </li>
       <li @click='routerLink("/viewdetail")'>
         <img class="bg" src="http://img3.imgtn.bdimg.com/it/u=4243706444,3270094211&fm=27&gp=0.jpg" alt="">
         <h4 class="title">景点名3</h4>
-        <img class="mark-img" src="@/assets/mark.png" alt="">
+        <img class="mark-img" src="@/assets/img/mark.png" alt="">
         <p class="mark">9.0</p>
-        <img class="pos-img" src="@/assets/position.png" alt="">
+        <img class="pos-img" src="@/assets/img/position.png" alt="">
         <p class="city">城市名，省名</p>
       </li>
     </ul>

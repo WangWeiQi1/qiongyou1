@@ -19,6 +19,7 @@
     "ly-tab": "^1.0.3",
     "moment": "^2.22.2",
     "swipe": "^1.7.7",
+    "tab-slider": "^1.1.2",
     "vue": "^2.5.2",
     "vue-aplayer": "^1.5.1",
     "vue-awesome-swiper": "^3.1.3",

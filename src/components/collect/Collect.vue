@@ -1,19 +1,19 @@
 <template>
 <div>
   <div class="btn" @click='routerLink("/note")'>
-    <img src="@/assets/note.png" alt="">
+    <img src="@/assets/img/note.png" alt="">
     <h4>游记</h4>
   </div>
   <div class="btn" @click='routerLink("/foodcollect")'>
-    <img src="@/assets/food.png" alt="">
+    <img src="@/assets/img/food.png" alt="">
     <h4>美食</h4>
   </div>
   <div class="btn" @click='routerLink("/hotelcol")'>
-    <img src="@/assets/hotel2.png" alt="">
+    <img src="@/assets/img/hotel2.png" alt="">
     <h4>酒店</h4>
   </div>
   <div class="btn" @click='routerLink("/viewcollect")'>
-    <img src="@/assets/view.png" alt="">
+    <img src="@/assets/img/view.png" alt="">
     <h4>景点</h4>
   </div>
 </div>

@@ -1,78 +1,50 @@
 <template>
-  <div class="header">
-    <div class="title">发现</div>
-    <div class="nav">
-      <nav>
-        <p v-for="(item,$index) in arr" :key="$index" @click="toggle($index)" :class="{active:$index==active}">{{item}}</p>
-      </nav>
-    </div>
-    <ul class="little-nav">
-     <li @click='routerLink("/youji")'>精选游记</li>
-     <li @click='routerLink("/gonglue")'>攻略</li>
-   </ul>
-    <ul class="content">
-      <li v-for="(val)  in dataList" :key="val.id">
-        <div class="youji">
-          <img :src="val.src">
-          <div class="content-title">香港七日游的旅行攻略</div>
-          <div class="time">
-            <img src="@/assets/img/time.png"/>
-            <span>出行日期:20180702</span>&nbsp;&nbsp;
-            <span>[7天]</span>&nbsp;&nbsp;
-            <span>作者&nbsp;王五 </span>
-          </div>
-        </div>
-      </li>
-    </ul>
-    <div class="footer" >
-      <ul>
-        <li @click='routerLink("/")'>首页</li>
-        <li @click='routerLink("find")'>发现</li>
-        <li @click='routerLink("add")'>+</li>
-        <li @click='routerLink("shop")'>旅行商城</li>
-        <li @click='routerLink("mine")'>我的</li>
-      </ul>
-    </div>
-
+    <div>
+        <main-footer></main-footer>
+        <ul class="container">
+           <li class="tripnotes" v-for="val in tripnotesList" :key="val.id" @click="toDetail(val.id)">
+                <div class="notes-bar">
+                    <img :src="val.src" alt="">
+                </div>
+                <div class="tripnotes-title">
+                    <h3>香港七日游的旅行攻略</h3>
+                    <span><img src="@/assets/img/time.png" alt=""></span>
+                    <span class="time">发布日期20180702</span>
+                    <span>作者&nbsp;王五</span>
+                </div>
+           </li>
+       </ul> 
   </div>
 </template>
 <script>
+  import MainFooter from '@/components/common/MainFooter.vue'
   import store from '@/vuex/store'
   import axios from 'axios'
 
   export default({
+    components:{
+        MainFooter,
+    },
     data(){
       return {
-         dataList:[],
-        active: 0,
-        arr: [
-          "精选",
-          "日本",
-          "韩国",
-          "泰国",
-          "新加坡",
-          "柬埔寨",
-          "美国",
-          "澳大利亚",
-        ],
+         tripnotesList:[],
       }
     },
-        store,
     created(){
       this.getData();
     },
     methods: {
+      toDetail(id){
+        this.$router.push({name:'Notedetail',params:{tripnotesId:id}});
+      },
       routerLink(path){
         this.$router.push(path);
-      },
-      toggle(index){
-        this.active=index;
       },
       getData() {
         axios.get('./static/data/photodata.json').then((res) => {
           console.log(res);
           
-          this.dataList = res.data.photoData;
+          this.tripnotesList = res.data.photoData;
         }).catch(() => {
 
         })
@@ -82,120 +54,73 @@
 </script>
 <style scoped>
 .header{
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+    height: 1rem;
+    width: 100%;
+    background: #00a680;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
 }
-  .title{
-    height:1rem;
+.header .header-title{
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.nav{
     width: 100%;
-    background-color:  rgb(50,205,50);
+    height: 1rem;
     position: fixed;
-    top:0;
+    top: 1rem;
     left: 0;
-    line-height: 1rem;
-    font-size: .4rem;
-    color: white;
-    z-index: 1;
-  }
-  .footer{
-    height:1rem;
-    background-color: rgb(50,205,50);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  .footer ul{
-    width: 100%;
+    z-index: 10;
+    background: #ffffff;
+    border-bottom:0.05rem solid #e0e0e0;
     display: flex;
-    flex-direction: row;
+
   }
-  .footer ul li{
+.nav li{
+    text-align: center;
+    font-size: 0.3rem;
     flex-grow: 1;
-    width: 0;
-    color: #fff;
-    line-height: 1rem;
-    text-align: center;
+    padding: 0.15rem;
+    margin: 0.1rem;
 
-  }
-  .nav{
-    width: 100%;
-    overflow:hidden;
-
-  }
-  .nav nav{
-    padding: 0 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    overflow: auto;
-  }
-  .nav p{
-    text-align: center;
-    font-size: 16px;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    padding: 10px;
-    margin: 5px;
-
-  }
-  .nav p.active{
-    color: #F2F2F2;
-    background-color: #00CC99;
-
-  }
-
-.little-nav{
-  height: 1rem;
 }
-  .little-nav li{
-    width: 49.5%;
-    height: 0.8rem;
-    font-size: 0.4rem;
-    text-align: center;
-    line-height: 0.8rem;
-    float: left;
-    border-bottom: 1px solid #333;
-  }
-
-.youji img{
-  height: 3.5rem;
-  width: 90%;
-  border-radius: 6%;
-  display: block;
+.container{
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  width: 92%;
   margin: 0 auto;
-  padding-top: 0.2rem;
-
 }
-.youji{
+.tripnotes{
   position: relative;
 }
-.content-title{
-  position: absolute;
-  bottom: 0.7rem;
-  left: 0.6rem;
-  font-size: 16px;
-  color: azure;
-}
-.time img{
-  width: 0.3rem;
-  height: 0.3rem;
-  display: block;
-  position: absolute;
-  left: -0.6rem;
- bottom: 0;
+.tripnotes .notes-bar img{
+  border-radius: 3%;
+  padding-top: 0.3rem;
 
 }
-.time{
-  position: absolute;
-  bottom: 0.2rem;
-  left: 1.2rem;
-  font-size: 16px;
-  color: azure;
+.tripnotes .tripnotes-title{
+    position: absolute;
+    left: 0.3rem;
+    bottom: 0.2rem;
+    color: #ffffff;
+}
+.tripnotes .tripnotes-title h3{
+    font-weight: bold;
+}
+.tripnotes .tripnotes-title img{
+    width: 0.45rem;
+}
+.tripnotes .tripnotes-title span{
+    font-size: 0.28rem;
+}
+.tripnotes .tripnotes-title .time{
+    margin-right: 0.3rem;
+    padding-top: 0.2rem;
 }
 </style>

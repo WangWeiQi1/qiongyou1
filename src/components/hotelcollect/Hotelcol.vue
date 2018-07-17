@@ -5,18 +5,18 @@
       <li @click='routerLink("/hoteldetail")'>
         <img class="bg" src="http://img1.imgtn.bdimg.com/it/u=2030704690,247138737&fm=27&gp=0.jpg" alt="">
         <h4 class="title">酒店名</h4>
-        <img class="mark-img" src="@/assets/mark.png" alt="">
+        <img class="mark-img" src="@/assets/img/mark.png" alt="">
         <p class="mark">9.0</p>
-        <img class="pos-img" src="@/assets/position.png" alt="">
+        <img class="pos-img" src="@/assets/img/position.png" alt="">
         <p class="city">城市名，省名</p>
       </li>
       <!--重复-->
       <li @click='routerLink("/hoteldetail")'>
         <img class="bg" src="http://pic3.40017.cn/hotel/2015/10/13/13/5JWsyL_400x300_00.jpg" alt="">
         <h4 class="title">酒店名2</h4>
-        <img class="mark-img" src="@/assets/mark.png" alt="">
+        <img class="mark-img" src="@/assets/img/mark.png" alt="">
         <p class="mark">9.0</p>
-        <img class="pos-img" src="@/assets/position.png" alt="">
+        <img class="pos-img" src="@/assets/img/position.png" alt="">
         <p class="city">城市名，省名</p>
       </li>
     </ul>

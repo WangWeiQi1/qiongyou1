@@ -4,7 +4,7 @@
       <h4 class="title">游记标题标题标题标题标题标题标题</h4>
       <p class="rote">路线1</p>
       <div class="hits">
-        <img src="@/assets/eye-fill.png" alt="">
+        <img src="@/assets/img/eye-fill.png" alt="">
         <p>1234</p>
       </div>
       <span class="author">
@@ -16,7 +16,7 @@
 <!--重复-->
     <div class="content">
       <div class="head-part">
-        <img src="@/assets/travel2.png" alt="">
+        <img src="@/assets/img/travel2.png" alt="">
         <p>出行前</p>
       </div>
       <div class="content-part">
@@ -27,7 +27,7 @@
     <!--重复-->
     <div class="content">
       <div class="head-part">
-        <img src="@/assets/travel2.png" alt="">
+        <img src="@/assets/img/travel2.png" alt="">
         <p>第一天</p>
       </div>
       <div class="content-part">

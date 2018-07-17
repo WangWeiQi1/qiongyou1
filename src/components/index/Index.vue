@@ -11,13 +11,13 @@
         <ul>
           <li @click='routerLink("/nearby")'><img src="@/assets/img/fujin.png" alt=""></li>
           <li @click='routerLink("/destination")'><img src="@/assets/img/mudidi.png" alt=""></li>
-          <li @click='routerLink("/mate")'><img src="@/assets/img/jieban.png" alt=""></li>
+          <li @click='routerLink("/every")'><img src="@/assets/img/jieban.png" alt=""></li>
           <li @click='routerLink("/gongju")'><img src="@/assets/img/gongju.png" alt=""></li>
         </ul>
         <ul class="listfooter">
           <li @click='routerLink("/nearby")'>附近</li>
           <li @click='routerLink("/destination")'>目的地</li>
-          <li @click='routerLink("/mate")'>结伴</li>
+          <li @click='routerLink("/every")'>结伴</li>
           <li @click='routerLink("/gongju")'>工具</li>
         </ul>
       </div>

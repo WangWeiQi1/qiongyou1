@@ -3,28 +3,28 @@
     <div class="title">我的</div>
     <div class="head">
       <div class="circle"></div>
-      <img class="back" src="@/assets/background.jpg" alt="">
+      <img class="back" src="@/assets/img/background.jpg" alt="">
       <img class="head-img" src="http://imgtu.5011.net/uploads/content/20170123/4752471485151835.jpg" alt="">
       <h3>昵称</h3>
     </div>
     <div class="btn" @click='routerLink("/order")'>
-      <img class="part" src="@/assets/order.png" alt="">
+      <img class="part" src="@/assets/img/order.png" alt="">
       <h4>我的订单</h4>
     </div>
     <div class="btn" @click='routerLink("/collect")'>
-      <img class="part" src="@/assets/coll.png" alt="">
+      <img class="part" src="@/assets/img/coll.png" alt="">
       <h4>我的收藏</h4>
     </div>
     <div class="btn" @click='routerLink("/note")'>
-      <img class="part" src="@/assets/tnote.png" alt="">
+      <img class="part" src="@/assets/img/tnote.png" alt="">
       <h4>我的游记</h4>
     </div>
     <div class="btn" @click='routerLink("/")'>
-      <img class="part" src="@/assets/step.png" alt="">
+      <img class="part" src="@/assets/img/step.png" alt="">
       <h4>我的足迹</h4>
     </div>
     <div class="btn" @click='routerLink("/MyMessage")'>
-      <img class="part" src="@/assets/message.png" alt="">
+      <img class="part" src="@/assets/img/message.png" alt="">
       <h4>我的消息</h4>
     </div>
     <div class="btn2">

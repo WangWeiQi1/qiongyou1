@@ -7,12 +7,10 @@ import Shop from '@/components/shop/Shop'
 import Add from '@/components/add/Add'
 import Nearby from '@/components/nearby/Nearby'
 import Destination from '@/components/destination/Destination'
-import Mate from '@/components/mate/Mate'
 import Tool from '@/components/tool/Tool'
 import Men from '@/components/mate/Men'
 import Women from '@/components/mate/Women'
 import Every from '@/components/mate/Every'
-import Youji from '@/components/youji/Youji'
 import Gonglue from '@/components/gonglue/Gonglue'
 import GonglueDetail from '@/components/gonglue/GonglueDetail'
 import Gongju from '@/components/gongju/Gongju'
@@ -27,21 +25,12 @@ import TripAddress from '@/components/tripAddress/TripAddress'
 import HotelDetail from '@/components/hotel/HotelDetail'
 import RestaurantDetail from '@/components/restaurant/RestaurantDetail'
 import TripAddressDetail from '@/components/tripAddress/TripAddressDetail'
-
-
-/***********hhy************/
 import MyMessage from '@/components/mymessage/MyMessage'
-
 import PrivateLetter from '@/components/privateletter/PrivateLetter'
 import PartnerMessage from '@/components/partnermessage/PartnerMessage'
-
-// //引入个人信息页面
- import PeopleIntroduction  from '@/components/partnermessage/PeopleIntroduction'
-// //引入创建页面
- import SetUp from '@/components/setup/SetUp'
-// //引入创建详情页
- import CreateTravel from '@/components/createtravel/CreateTravel'
-/*************hhy**************/
+import PeopleIntroduction  from '@/components/partnermessage/PeopleIntroduction'
+import SetUp from '@/components/setup/SetUp'
+import CreateTravel from '@/components/createtravel/CreateTravel'
 import Unlog from '@/components/login/Unlog'
 import Foodcollect from '@/components/foodcollect/Foodcollect'
 import Hotelcol from '@/components/hotelcollect/Hotelcol'
@@ -50,7 +39,9 @@ import Order from '@/components/order/Order'
 import Note from '@/components/youji/Note'
 import Notedetail from '@/components/youji/Notedetail'
 import Collect from '@/components/collect/Collect'
-
+import EveryDetail from '@/components/mate/EveryDetail'
+import MenDetail from '@/components/mate/MenDetail'
+import WomenDetail from '@/components/mate/WomenDetail'
 Vue.use(Router);
 
 export default new Router({
@@ -84,10 +75,6 @@ export default new Router({
       name:'Destination',
       component:Destination
     },{
-      path:'/mate',
-      name:'Mate',
-      component:Mate
-    },{
       path:'/tool',
       name:'Tool',
       component:Tool
@@ -107,10 +94,20 @@ export default new Router({
       component:Every
     },
     {
-      path:'/youji',
-      name:'Youji',
-      component:Youji
-    }, {
+      path:'/everydetail',
+      name:'EveryDetail',
+      component: EveryDetail
+    },
+    {
+      path:'/mendetail',
+      name:'MenDetail',
+      component:MenDetail
+    },{
+      path: '/womendetail',
+      name: 'WomenDetail',
+      component: WomenDetail
+    },
+    {
       path:'/gonglue',
       name:'Gonglue',
       component:Gonglue

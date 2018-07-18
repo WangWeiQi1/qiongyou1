@@ -10,13 +10,11 @@
     </form>
     <h4>{{hisCity}}</h4>
     <div class="hiscontent">
-    <div class="historyCity" v-for="(val,index)  in historyCity">{{val.name}}</div>
+      <div class="historyCity" v-for="(val,index)  in historyCity" :key="index">{{val.name}}</div>
     </div>
-
     <div class="hotCity">{{hotCity}}</div>
-
     <div class="hotcontent">
-    <div class="hotList" v-for="(hot,index)  in hotList">{{hot.name}}</div>
+      <div class="hotList" v-for="(hot,index)  in hotList" :key="index">{{hot.name}}</div>
     </div>
   </div>
 </template>
@@ -62,22 +60,10 @@
         ]
     }
     },
-    store,
-    created(){
-
-//      this.getData()
-    },
     methods: {
       goBack(){
         this.$router.go(-1);
       },
-//      getData(){
-//        axios.get('./static/data/hotCity.json').then((res)=>{
-//          this.hotList=res.data.hotCity
-//        }).catch(()=>{
-//
-//        })
-//      },
     }
   })
 </script>
@@ -90,73 +76,52 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-  .title img{
+.title img{
     float: left;
     position: absolute;
     top:0.2rem;
     left: 0.1rem;
-  }
-  .header{
+}
+.header{
     height:1rem;
     width: 100%;
-    background-color:  rgb(50,205,50);
+    background-color:  #00a680;
     position: fixed;
     top:0;
     left: 0;
     line-height: 1rem;
     font-size: .4rem;
     color: white;
-
   }
-  h3{
-    float: left;
-    position: absolute;
-
-    left: 1rem;
-
-  }
-  h4{
-    float: left;
-    left: 1rem;
-    display: block;
-  }
-
+h4{
+    text-align: left;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+}
 .search{
   width: 100%;
-  height: .5rem;
+  height: .8rem;
 }
 .hiscontent{
-  float: left;
-  margin-top: .6rem;
-  margin-left: -3rem;
-  margin-bottom: .6rem;
+  display: flex;
 }
-  .historyCity{
-    display: block;
-    float: left;
-    font-size: .5rem;
-    margin-left: .5rem;
-   margin-bottom: .3rem;
-    /*position: absolute;*/
-    /*margin-left: .5rem;*/
-    /*top:2rem*/
+.historyCity{
+    flex-grow: 1;
+    font-size: 0.35rem;
   }
-
-  .hotCity{
-    float: left;
-    position: absolute;
-    font-size:.3rem ;
-    top:3rem
-
-  }
-  .hotList{
-    float: left;
-    font-size: .5rem;
-    /*position: absolute;*/
-    margin-left: .5rem;
-    /*top:3.4rem*/
-  }
-  .hotcontent{
-
-  }
+.hotCity{
+  text-align: left;
+  font-size: 0.35rem;
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+}
+.hotcontent{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hotList{
+  flex-grow: 1;
+  width: 30%;
+  font-size: 0.3rem;
+} 
 </style>

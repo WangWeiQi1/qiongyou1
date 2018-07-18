@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="detail-imgs">
-            <img src="@/assets/img/back.png" alt="" class="btn" @click="goback('/hotel')">
+            <img src="@/assets/img/back.png" alt="" class="btn" @click="goback('hotel')">
             <img :src="detailList.img" alt="" class="hotelDetail-img">
             <img src="@/assets/img/collection.png" alt="" class="collection">
         </div>

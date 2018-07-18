@@ -30,21 +30,60 @@
             <h4>景点</h4>
         </li>
       </ul>
+      <div class="hot-address">
+          <h3>高分酒店</h3>
+          <ul >
+            <li v-for="(val,index)  in List" :key="index" @click="routeLink('/hoteldetail')">
+                <img :src="val.src">
+            </li>
+        </ul>
+      </div>
+      <div class="hot-address">
+          <h3>高分餐厅</h3>
+          <ul >
+            <li v-for="(val,index)  in List" :key="index" @click="routeLink('/restaurantdetail')">
+                <img :src="val.src">
+            </li>
+        </ul>
+      </div>
+      <div class="hot-address">
+          <h3>热门景点</h3>
+          <ul >
+            <li v-for="(val,index)  in List" :key="index" @click="routeLink('tripaddressdetail')">
+                <img :src="val.src">
+            </li>
+        </ul>
+      </div>
     </div>
 </template>
 <script>
 require('vue-swipe/dist/vue-swipe.css');
 import { Swipe, SwipeItem } from 'vue-swipe';
+import axios from 'axios'
 export default {
+    data(){
+        return{
+            List:[]
+        }
+    },
     components: {
       'swipe': Swipe,
       'swipe-item': SwipeItem
+    },
+    created(){
+        this.getPhoto();
     },
     methods:{
         routeLink(path){
             this.$router.push(path);
         },
+        getPhoto(){
+        axios.get('./static/data/photodata.json').then((res)=>{
+          this.List=res.data.photoData;
+        }).catch(()=>{
 
+        })
+      }
     }
 }
 </script>
@@ -84,19 +123,16 @@ export default {
     margin-bottom: .3rem;
     padding-top: 1rem;
   }
-
   .slide1 {
     background-image: url("../../../static/img/timg-1.jpeg");
     color: #fff;
     background-size: contain;
   }
-
   .slide2 {
     background-image: url('../../../static/img/timg-2.jpeg');
     color: #000;
     background-size: contain;
   }
-
   .slide3 {
     background-image: url("../../../static/img/timg-6.jpeg");
     color: #fff;
@@ -108,10 +144,11 @@ export default {
     background-size: contain;
   }
   .items li div{
-      width: 1rem;
+      width: 0.8rem;
       background: #00a680;
       border-radius: 50%;
-      margin-left: 0.55rem;
+      margin-top: 0.3rem;
+      margin-left: 0.65rem;
   }
   .items {
       width: 100%;
@@ -122,4 +159,20 @@ export default {
       width: 0;
       text-align: center;
   }
+.hot-address{
+   padding: 0.5rem 0.15rem;
+}
+.hot-address h3{
+  font-weight: bold;
+}
+.hot-address ul{
+  margin-top: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hot-address ul li{
+  flex-grow: 1;
+  width: 29%;
+  margin:1%;
+}
 </style>

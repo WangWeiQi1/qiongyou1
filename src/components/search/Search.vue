@@ -15,14 +15,12 @@
   export default({
     data(){
       return{
-
         box:'',
         hisCity:"最近",
         historyCity:
           {
             name:"泰国"
           },
-
       }
     },
     store,
@@ -38,14 +36,12 @@
         axios.get('./static/data/hotCity.json').then((res)=>{
           this.hotList=res.data.hotCity
         }).catch(()=>{
-
         })
       },
     }
   })
 </script>
 <style scoped>
-
   .header{
     height:1rem;
     width: 100%;
@@ -56,21 +52,16 @@
     line-height: 1rem;
     font-size: .4rem;
     color: white;
-
   }
   h3{
     float: left;
     position: absolute;
-
     left: 1rem;
-
   }
   h4{
     float: left;
     left: 1rem;
-
   }
-
   .search{
     width: 100%;
     height: .5rem;
@@ -87,7 +78,6 @@
     position: absolute;
     font-size:.3rem ;
     top:3rem
-
   }
   .hotList{
     float: left;

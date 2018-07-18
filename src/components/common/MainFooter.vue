@@ -114,9 +114,9 @@ export default {
 }
 .footer li{
     font-size: 0.25rem;
-    /* color: #ffffff; */
+    text-align: center;
     flex-grow: 1;
     width: 0;
-    padding: 0.3rem 0.25rem;
+    padding: 0.3rem;
 }
 </style>

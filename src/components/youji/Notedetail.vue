@@ -1,54 +1,74 @@
 <template>
-  <div>
+  <div class="main">
+    <header1></header1>
+    <footer1></footer1>
+    
     <div class="note-head">
       <h4 class="title">游记标题标题标题标题标题标题标题</h4>
-      <p class="rote">路线1</p>
+      <p class="rote">简介简介</p>
       <div class="hits">
         <img src="@/assets/img/eye-fill.png" alt="">
         <p>1234</p>
       </div>
       <span class="author">
-        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531326866675&di=c3ee710355466f0dc2d0a051aa57f2e8&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fpeople%2F201501%2F11%2F20150111114017_3GVTi.jpeg" alt="">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531907812447&di=4a93bd5c16f92c9671997d85d506b66c&imgtype=0&src=http%3A%2F%2Fwww.qqzhi.com%2Fuploadpic%2F2015-01-19%2F014420854.jpg" alt="">
         <p>作者名</p>
       </span>
       <span class="time">2018-01-01~2018-01-10</span>
     </div>
-<!--重复-->
-    <div class="content">
+
+    <div class="content" v-for="(val)  in dataList" :key="val.id">
       <div class="head-part">
         <img src="@/assets/img/travel2.png" alt="">
-        <p>出行前</p>
+        <p>{{val.day}}</p>
       </div>
       <div class="content-part">
-        <img src="http://img.nbcyl.com/image/scenicregion/scenicregionimage1/2015/11/f97c1caf-5949-4a39-bb1e-d6fc9c9a8112.jpg" alt="">
-        <p>内容内容内容内容等位基因频率分析是査找基因组数据（别是生殖细胞数据类型）中等位基因频率的一种技术。等位基因频率定义为：一个物种种群中指定染色体基因座上有某个特定等位基因的百分比。我们将开发一个MapReduce解决方案来聚集各个染指定键（由[chromosome, start-position, stop-position]组成）对应的所有基因组数据，然后应用Fisher精确检验，用来确定两组变量之间是否存在</p>
+        <img :src="val.pic" alt="">
+        <p>{{val.content}}</p>
       </div>
     </div>
-    <!--重复-->
-    <div class="content">
-      <div class="head-part">
-        <img src="@/assets/img/travel2.png" alt="">
-        <p>第一天</p>
-      </div>
-      <div class="content-part">
-        <img src="http://s8.sinaimg.cn/mw690/0025sgpQty6QA2NWS7Jb7&690" alt="">
-        <p>等位基因频率分析是査找基因组数据（别是生殖细胞数据类型）中等位基因频率的一种技术。等位基因频率定义为：一个物种种群中指定染色体基因座上有某个特定等位基因的百分比。我们将开发一个MapReduce解决方案来聚集各个染指定键（由[chromosome, start-position, stop-position]组成）对应的所有基因组数据，然后应用Fisher精确检验，用来确定两组变量之间是否存在</p>
-      </div>
-    </div>
+
   </div>
 </template>
 <script>
   import store from '@/vuex/store'
+  import axios from 'axios'
+  import Footer1 from '@/components/bar/Footer1'
+  import Header1 from '@/components/bar/Header1'
+
   export default({
     store,
-//    created(){
-//      this.$store.commit('routerLinks',{
-//        title:'游记详情'
-//      });
-//    },
+    data(){
+      return {
+        dataList:[]
+      }
+    },
+    components:{
+      'header1': Header1,
+      'footer1': Footer1
+    },
+    created(){
+      this.getData();
+      this.$store.commit('routerLink',{
+        title:'游记详情'
+      });
+    },
+    methods: {
+      getData() {
+        axios.get('./static/data/note.json').then((res) => {
+          this.dataList = res.data.notedetail;
+        }).catch(() => {
+
+        })
+      }
+    }
   })
 </script>
 <style scoped>
+.main{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 .note-head{
   height: 2.3rem;
   padding-top: 0.1rem;
@@ -75,8 +95,8 @@
   top:1rem;
 }
 .author img{
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   position: absolute;
   left: 0.1rem;
@@ -84,7 +104,7 @@
 }
 .author p{
   position: absolute;
-  left: 1rem;
+  left: 1.2rem;
   bottom: 0.2rem;
 }
 .time{

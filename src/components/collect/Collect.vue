@@ -1,5 +1,7 @@
 <template>
-<div>
+<div class="main">
+  <header1></header1>
+  <footer1></footer1>
   <div class="btn" @click='routerLink("/note")'>
     <img src="@/assets/img/note.png" alt="">
     <h4>游记</h4>
@@ -20,13 +22,19 @@
 </template>
 <script>
   import store from '@/vuex/store'
+  import Footer1 from '@/components/bar/Footer1'
+  import Header1 from '@/components/bar/Header1'
   export default({
     store,
-//    created(){
-//      this.$store.commit('routerLinks',{
-//        title:'我的收藏'
-//      });
-//    },
+    components:{
+      'header1': Header1,
+      'footer1': Footer1
+    },
+    created(){
+      this.$store.commit('routerLink',{
+        title:'我的收藏'
+      });
+    },
     methods: {
       routerLink(path){
         this.$router.push(path);
@@ -35,6 +43,9 @@
   })
 </script>
 <style scoped>
+  .main{
+    margin-top: 2rem;
+  }
 .btn{
   width: 4rem;
   height: 1rem;
@@ -42,7 +53,7 @@
   line-height: 1rem;
   color: #ffffff;
   border-radius: 0.1rem;
-  background-color: #32cd32;
+  background-color: rgb(141, 191, 60);
   margin: 1rem auto;
   position: relative;
 }

@@ -1,54 +1,69 @@
 <template>
-  <div>
-    <!--重复，跳到游记详情-->
-    <div class="card" @click='routerLink("/notedetail")'>
+  <div class="main">
+    <header1></header1>
+    <footer1></footer1>
+    
+    <div class="card" @click='routerLink("/notedetail")' v-for="(val)  in dataList" :key="val.id">
       <div class="card-head">
-        <img class="card-img" src="http://img.zcool.cn/community/012c65580e16bfa84a0d304fb7dbeb.jpg@1280w_1l_2o_100sh.jpg">
+        <img class="card-img" :src="val.src">
         <img class="time-img" src="@/assets/img/time2.png" alt="">
-        <span class="time">2018-01-01</span>
+        <span class="time">{{val.time}}</span>
         <img class="user" src="@/assets/img/user2.png" alt="">
-        <span class="author">作者名1</span>
+        <span class="author">{{val.author}}</span>
       </div>
       <div class="card-body">
-        <h4 class="card-title">游记总标题最多二十字</h4>
-        <p class="card-rote">路线1</p>
+        <h4 class="card-title">{{val.title}}</h4>
+        <p class="card-rote">{{val.brief}}</p>
       </div>
     </div>
-    <!--重复-->
-    <div class="card" @click='routerLink("/notedetail")'>
-      <div class="card-head">
-        <img class="card-img" src="http://bj-feiyuantu.oss-cn-beijing.aliyuncs.com/creative/vcg/veer/800water/veer-100047154.jpg">
-        <img class="time-img" src="@/assets/img/time2.png" alt="">
-        <span class="time">2018-02-04</span>
-        <img class="user" src="@/assets/img/user2.png" alt="">
-        <span class="author">作者名2</span>
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">游记总标题最多二十字</h4>
-        <p class="card-rote">路线2</p>
-      </div>
-    </div>
+    
+    
   </div>
 </template>
 
 <script>
   import store from '@/vuex/store'
+  import axios from 'axios'
+  import Footer1 from '@/components/bar/Footer1'
+  import Header1 from '@/components/bar/Header1'
+
   export default({
     store,
-//    created(){
-//      this.$store.commit('routerLinks',{
-//        title:'游记'
-//      });
-//    },
+    data(){
+      return {
+        dataList:[]
+      }
+    },
+    components:{
+      'header1': Header1,
+      'footer1': Footer1
+    },
+    created(){
+      this.getData();
+      this.$store.commit('routerLink',{
+        title:'游记'
+      });
+    },
     methods: {
       routerLink(path){
         this.$router.push(path);
+      },
+      getData() {
+        axios.get('./static/data/note.json').then((res) => {
+          this.dataList = res.data.note;
+        }).catch(() => {
+
+        })
       }
     }
   })
 </script>
 
 <style scoped>
+  .main{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
   .card-head{
     position: relative;
     z-index: -1;

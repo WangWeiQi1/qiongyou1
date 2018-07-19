@@ -1,44 +1,61 @@
 <template>
-  <div>
+  <div class="main">
+    <header1></header1>
+    <footer1></footer1>
     <ul>
-      <!--重复，点击到酒店详情-->
-      <li @click='routerLink("/hoteldetail")'>
-        <img class="bg" src="http://img1.imgtn.bdimg.com/it/u=2030704690,247138737&fm=27&gp=0.jpg" alt="">
-        <h4 class="title">酒店名</h4>
+
+      <li @click='routerLink("/hoteldetail")' v-for="(val)  in dataList" :key="val.id">
+        <img class="bg" :src="val.region_photo" alt="">
+        <h4 class="title">{{val.region_name}}</h4>
         <img class="mark-img" src="@/assets/img/mark.png" alt="">
-        <p class="mark">9.0</p>
+        <p class="mark">{{val.region_score}}</p>
         <img class="pos-img" src="@/assets/img/position.png" alt="">
-        <p class="city">城市名，省名</p>
+        <p class="city">{{val.city_name}}</p>
       </li>
-      <!--重复-->
-      <li @click='routerLink("/hoteldetail")'>
-        <img class="bg" src="http://pic3.40017.cn/hotel/2015/10/13/13/5JWsyL_400x300_00.jpg" alt="">
-        <h4 class="title">酒店名2</h4>
-        <img class="mark-img" src="@/assets/img/mark.png" alt="">
-        <p class="mark">9.0</p>
-        <img class="pos-img" src="@/assets/img/position.png" alt="">
-        <p class="city">城市名，省名</p>
-      </li>
+
     </ul>
   </div>
 </template>
 <script>
   import store from '@/vuex/store'
+  import axios from 'axios'
+  import Footer1 from '@/components/bar/Footer1'
+  import Header1 from '@/components/bar/Header1'
   export default({
     store,
-//    created(){
-//      this.$store.commit('routerLinks',{
-//        title:'酒店收藏'
-//      });
-//    },
+    components:{
+      'header1': Header1,
+      'footer1': Footer1
+    },
+    data(){
+      return {
+        dataList:[]
+      }
+    },
+    created(){
+      this.getData();
+      this.$store.commit('routerLink',{
+        title:'酒店收藏'
+      });
+    },
     methods: {
       routerLink(path){
         this.$router.push(path);
+      },
+      getData() {
+        axios.get('./static/data/collect.json').then((res) => {
+          this.dataList = res.data.hotelcollect;
+        }).catch(() => {
+
+        })
       }
     }
   })
 </script>
 <style scoped>
+  .main{
+    margin-top: 1rem;
+  }
   div ul li{
     height: 2.8rem;
     margin-bottom: 0.1rem;
@@ -60,7 +77,7 @@
   .pos-img{
     height: 0.3rem;
     position: absolute;
-    right: 1.7rem;
+    right: 2.5rem;
     bottom: 0.19rem;
   }
   .title{

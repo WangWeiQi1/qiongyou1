@@ -1,0 +1,57 @@
+{
+    "foodcollect":[
+        {
+            "region_type":"B",
+			"region_photo":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532501153&di=f024db8c96d3a25684674c4fc0574d6c&imgtype=jpg&er=1&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F1c950a7b02087bf4185d64c7f9d3572c11dfcf6e.jpg",
+			"region_name":"pasta!!!",
+	        "region_score":"9.0",
+	        "city_name": "黑龙江省，哈尔滨市"
+        },
+        {
+            "region_type":"B",
+			"region_photo":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532501117&di=173495c7be63ff13d90181e033926377&imgtype=jpg&er=1&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fdcc451da81cb39dbb8099371db160924aa1830cf.jpg",
+			"region_name":"喵印西餐",
+	        "region_score":"9.2",
+	        "city_name": "黑龙江省，哈尔滨市"
+        }
+    ],
+    "hotelcollect":[
+        {
+            "region_type":"A",
+			"region_photo":"http://pic3.40017.cn/hotel/2015/10/13/13/5JWsyL_400x300_00.jpg",
+			"region_name":"酒店1",
+	        "region_score":"8.8",
+	        "city_name": "黑龙江省，哈尔滨市"
+        },
+        {
+            "region_type":"A",
+			"region_photo":"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2100983422,1716955677&fm=27&gp=0.jpg",
+			"region_name":"香格里拉",
+	        "region_score":"9.6",
+	        "city_name": "黑龙江省，哈尔滨市"
+        }
+    ],
+    "viewcollect":[
+        {
+            "region_type":"C",
+			"region_photo":"http://img.zcool.cn/community/012c65580e16bfa84a0d304fb7dbeb.jpg@1280w_1l_2o_100sh.jpg",
+			"region_name":"景点景点",
+	        "region_score":"7.9",
+	        "city_name": "黑龙江省，哈尔滨市"
+        },
+        {
+            "region_type":"C",
+			"region_photo":"http://pic.lvmama.com/uploads/pc/place2/2014-12-01/71cf4ad1-2651-409b-811c-86bd5a931d92.jpg",
+			"region_name":"冰雪大世界",
+	        "region_score":"8.8",
+	        "city_name": "黑龙江省，哈尔滨市"
+        },
+        {
+            "region_type":"C",
+			"region_photo":"http://img3.imgtn.bdimg.com/it/u=4243706444,3270094211&fm=27&gp=0.jpg",
+			"region_name":"龙塔",
+	        "region_score":"7.5",
+	        "city_name": "黑龙江省，哈尔滨市"
+        }
+    ]
+}

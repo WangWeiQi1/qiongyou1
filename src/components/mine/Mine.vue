@@ -1,11 +1,13 @@
 <template>
   <div class="header">
-    <div class="title">我的</div>
+    <header2></header2>
+    <footer1></footer1>
     <div class="head">
       <div class="circle"></div>
       <img class="back" src="@/assets/img/background.jpg" alt="">
       <img class="head-img" src="http://imgtu.5011.net/uploads/content/20170123/4752471485151835.jpg" alt="">
-      <h3>昵称</h3>
+      <h3>昵称昵称</h3>
+      <img class="sex" src="@/assets/img/man.png" alt="">
     </div>
     <div class="btn" @click='routerLink("/order")'>
       <img class="part" src="@/assets/img/order.png" alt="">
@@ -27,24 +29,16 @@
       <img class="part" src="@/assets/img/message.png" alt="">
       <h4>我的消息</h4>
     </div>
-    <div class="btn2">
+    <div class="btn2" @click='routerLink("/unlog")'>
       <h4>注销</h4>
-    </div>
-
-    <div class="footer" >
-      <ul>
-        <li @click='routerLink("/")'>首页</li>
-        <li @click='routerLink("find")'>发现</li>
-        <li @click='routerLink("add")'>+</li>
-        <li @click='routerLink("shop")'>旅行商城</li>
-        <li @click='routerLink("mine")'>我的</li>
-      </ul>
     </div>
   </div>
 </template>
 <script>
   import store from '@/vuex/store'
   import axios from 'axios'
+  import Footer1 from '@/components/bar/Footer1'
+  import Header2 from '@/components/bar/Header2'
 
   export default({
     data(){
@@ -53,8 +47,14 @@
       }
     },
     store,
+    components:{
+      'header2': Header2,
+      'footer1': Footer1
+    },
     created(){
-
+      this.$store.commit('routerLink',{
+        title:'个人中心'
+      });
     },
     methods: {
       routerLink(path){
@@ -64,40 +64,10 @@
   })
 </script>
 <style scoped>
-  .title{
-    height:1rem;
-    width: 100%;
-    background-color:  rgb(50,205,50);
-    position: fixed;
-    top:0;
-    left: 0;
-    line-height: 1rem;
-    font-size: .4rem;
-    color: white;
-  }
-  .footer{
-    height:1rem;
-    background-color: rgb(50,205,50);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  .footer ul{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-  }
-  .footer ul li{
-    flex-grow: 1;
-    width: 0;
-    color: #fff;
-    line-height: 1rem;
-    text-align: center;
-
-  }
   .header{
     position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   .btn{
     width: 4rem;
@@ -106,7 +76,7 @@
     line-height: 1rem;
     color: #ffffff;
     border-radius: 0.1rem;
-    background-color: #32cd32;
+    background-color: rgb(141, 191, 60);
     margin: 0.3rem auto;
     position: relative;
   }
@@ -155,10 +125,15 @@
     z-index: -1;
   }
   h3{
-    color: #614b29;
+    color: rgb(53, 43, 16);
     position: absolute;
     left: 2.5rem;
     top: 1rem;
   }
-
+  .sex{
+    width: 0.4rem;
+    position: absolute;
+    left: 4.1rem;
+    top: 1.1rem;
+  }
 </style>

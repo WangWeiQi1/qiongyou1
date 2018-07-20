@@ -2,7 +2,7 @@
   <div>
     <header2></header2>
     <footer1></footer1>
-    <div class="unlog" @click='routerLink("/login")'>
+    <div class="unlog" @click='routerLink("/loginrequest")'>
       <img class="lock" src="@/assets/img/login2.png" alt="">
       <img class="key" src="@/assets/img/key.png" alt="">
       <p>点击登录</p>

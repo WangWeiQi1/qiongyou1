@@ -43,6 +43,8 @@ import Collect from '@/components/collect/Collect'
 import EveryDetail from '@/components/mate/EveryDetail'
 import MenDetail from '@/components/mate/MenDetail'
 import WomenDetail from '@/components/mate/WomenDetail'
+import LoginRequest from '@/components/login/LoginRequest'
+import Regist from '@/components/login/Regist'
 Vue.use(Router);
 
 export default new Router({
@@ -241,6 +243,16 @@ export default new Router({
       path: '/collect',
       name: 'Collect',
       component: Collect
+    },
+    {
+      path: '/loginrequest',
+      name: 'LoginRequest',
+      component :LoginRequest   
+    },
+    {
+      path: '/regist',
+      name: 'Regist',
+      component:Regist
     }
   ]
 })

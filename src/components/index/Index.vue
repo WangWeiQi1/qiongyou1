@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="header">
-        <p class="btn">登录</p>
+        <p class="btn" @click="routerLink('/loginrequest')">登录</p>
       </div>
       <swipe class="my-swipe">
         <swipe-item class="slide1"></swipe-item>
